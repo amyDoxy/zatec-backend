@@ -1,0 +1,16 @@
+spring:
+  security:
+    user:
+      name: admin
+      password: password
+
+springdoc:
+  api-docs:
+    path: /api-docs
+chuck-norris:
+  base-url: https://api.chucknorris.io/jokes/
+  categories-endpoint: categories
+  joke-endpoint: random
+star-wars:
+  base-url: https://swapi.dev/api/
+  people-endpoint: people
