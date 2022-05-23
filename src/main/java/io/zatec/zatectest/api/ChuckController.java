@@ -34,13 +34,13 @@ import static io.zatec.zatectest.utils.MessageConstants.CATEGORY_MANDATORY;
     private final ChuckService chuckService;
 
     @GetMapping("/categories") @ResponseStatus(HttpStatus.OK) @Operation(summary = "List categories", description = "Retrieve the list of categories") @ApiResponses({
-            @ApiResponse(responseCode = "200", description = "OK", content = @Content(array = @ArraySchema(schema = @Schema(implementation = OpenApiResource.GetCategoriesResponse.class)))) }) public Collection<String> retrieveCategories() {
+            @ApiResponse(responseCode = "200", description = "OK") }) public Collection<String> retrieveCategories() {
         log.debug("Inside ChuckController::retrieveCategories");
         return chuckService.retrieveJokeCategories();
     }
 
     @GetMapping("joke") @ResponseStatus(HttpStatus.OK) @Operation(summary = "List categories", description = "Retrieve the list of categories") @ApiResponses({
-            @ApiResponse(responseCode = "200", description = "OK", content = @Content(array = @ArraySchema(schema = @Schema(implementation = OpenApiResource.GetCategoriesResponse.class)))) }) public JokeResponse fetchJokeByCategory(
+            @ApiResponse(responseCode = "200", description = "OK", content = @Content(array = @ArraySchema(schema = @Schema(implementation = OpenApiResource.GetJokeResponse.class)))) }) public JokeResponse fetchJokeByCategory(
             @RequestParam @NotBlank(message = CATEGORY_MANDATORY) String category) {
         log.debug("Inside ChuckController::fetchJokeByCategory");
 
