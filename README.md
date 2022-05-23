@@ -35,5 +35,10 @@ Requirements
 Run the following commands:
 
 1. `git clone https://github.com/amyDoxy/zatec-backend`
-1. `mvn install`
-1. From your IDE run the main class `ZatecTestApplication`
+2. `mvn install`
+3. From your IDE run the main class `ZatecTestApplication`
+
+## Additional details
+
+* Default credentials [Username: admin, Password: password]
+* Open API Link: http://localhost:8190/swagger-ui.html
