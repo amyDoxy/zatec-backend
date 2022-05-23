@@ -4,7 +4,7 @@ services:
     build:
       context: .
     ports:
-      - 8443:8080
+      - 8190:8190
     environment:
       - SPRING_SECURITY_USER_NAME=admin
       - SPRING_SECURITY_USER_PASSWORD=password
